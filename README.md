@@ -18,7 +18,7 @@
 
 ## Step 2. Deployment에 Grafana config 적용
 * 목적 : 변경한 설정값을 그라파나 Deployment에 적용함
-* monitoring 네임스페이스의 grafana Deployment를 다음 yaml로 변경한다([deployment](https://github.com/tmax-cloud/install-grafana/tree/master/Grafana/yaml/grafana.yaml))
+* monitoring 네임스페이스의 grafana Deployment를 다음 yaml로 변경한다([deployment](https://github.com/tmax-cloud/install-grafana/tree/main/yaml/grafana.yaml))
 * 비고
 	* 기존 Deployment의 내용에서 volumes와 volumeMounts에 grafana-config를 추가한 것이다
 
@@ -26,7 +26,7 @@
 
 ## Step 3. 시연 대시보드 UID 및 설정 변경
 * 목적 : 대시보드 설정 변경
-* monitoring 네임스페이스의 grafana-dashboard-k8s-resources-namespace ConfigMaps를 다음 yaml로 변경한다([dashboard](https://github.com/tmax-cloud/install-grafana/tree/master/Grafana/yaml/grafana-dashboard-k8s-resources-namespace.yaml))
+* monitoring 네임스페이스의 grafana-dashboard-k8s-resources-namespace ConfigMaps를 다음 yaml로 변경한다([dashboard](https://github.com/tmax-cloud/install-grafana/tree/main/yaml/grafana-dashboard-k8s-resources-namespace.yaml))
 * 비고
 	* 기존 ConfigMaps의 내용에서 uid와 변수의 hide값을 변경한 것이다
 
