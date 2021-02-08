@@ -1,4 +1,44 @@
 
+
+## 구성 요소
+* grafana ([grafana/grafana:6.4.3](https://grafana.com/grafana/download))
+
+## Prerequisite
+
+
+## 폐쇄망 구축 가이드
+
+* 작업 디렉토리 생성 및 환경 설정
+```
+$ mkdir -p ~/grafana-install
+$ export GRAFANA_VERSION=6.4.3
+$ export REGISTRY=registryip:port
+$ cd $PROMETHEUS_HOME
+```
+* 외부 네트워크 통신이 가능한 환경에서 필요한 이미지를 다운받는다.
+```
+$ sudo docker pull grafana/grafana:${GRAFANA_VERSION}
+$ sudo docker save grafana/grafana:${GRAFANA_VERSION} > grafana_${GRAFANA_VERSION}.tar
+```
+* 생성한 이미지 tar 파일을 폐쇄망 환경으로 이동시킨 뒤 사용하려는 registry에 push한다.
+```
+$ sudo docker load < grafana_${GRAFANA_VERSION}.tar
+
+$ sudo docker tag grafana/grafana:${GRAFANA_VERSION} ${REGISTRY}/grafana:${GRAFANA_VERSION}
+
+$ sudo docker push ${REGISTRY}/grafana:${GRAFANA_VERSION}
+
+```
+* yaml파일에 version정보를 추가한다.
+```
+$ sed -i 's/{GRAFANA_VERSION}/'${GRAFANA_VERSION}'/g' grafana-deployment.yaml
+```
+
+* 폐쇄망에서 설치를 진행하여 별도의 image registry를 사용하는 경우 registry 정보를 추가로 설정해준다.
+```
+$ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana-deployment.yaml		 
+```
+	
 # Grafana 설정 가이드
 
 ## Install Steps
@@ -37,3 +77,14 @@
 * 목적: HyperCloud에서 Grafana의 정상 동작을 확인함
 * HyperCloud UI에서 현재 pod가 존재하는 네임스페이스를 지정한다.
 * 메뉴에서 그라파나를 선택한 뒤 대시보드가 출력되면 성공.
+
+
+## 자원 할당 가이드
+* 목적 : grafana의 자원 할당
+* grafana :
+	limits : cpu: 200m / memory: 200Mi
+	requests : cpu: 100m / memory: 100Mi
+
+## 삭제 가이드
+* 목적: grafana 삭제
+* kubectl delete -f /yaml 를 실행한다.
