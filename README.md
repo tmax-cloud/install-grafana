@@ -42,12 +42,15 @@ $ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
 ```
 
 ## Install Steps
-1. [Prometheus 확인](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-1-prometheus-%ED%99%95%EC%9D%B8)
-2. [Grafana deploy](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-2-grafana-deploy)
-3. [Grafana 확인](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-3-grafana-%ED%99%95%EC%9D%B8)	
+
+1. [Prometheus 확인](https://github.com/tmax-cloud/install-grafana/blob/4.1/README.md#step-1-prometheus-%ED%99%95%EC%9D%B8)
+2. [Grafana deploy](https://github.com/tmax-cloud/install-grafana/blob/4.1/README.md#step-2-grafana-deploy)
+3. [Grafana 확인](https://github.com/tmax-cloud/install-grafana/blob/4.1/README.md#step-3-grafana-%ED%99%95%EC%9D%B8)	
+
 
 
 ***
+
 
 ## Step 1. Prometheus 확인
 * 목적 : prometheus 설치 여부를 확인
@@ -70,9 +73,11 @@ $ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
 
 ***
 
+
 ## Step 3. Grafana 확인
 * 목적 : grafana 정상 동작 확인
 * edit svc $GRAFANA_SVC -n monitoring 명령어를 통해 ClusterIP 타입으로 생성된 서비스를 NodePort 또는 LoadBalancer 타입으로 수정한 뒤 해당 IP:port 를 통해 대시보드에 접근할 수 있음
+
 
 
 ## 자원 할당 가이드
