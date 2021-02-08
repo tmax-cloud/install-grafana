@@ -42,9 +42,9 @@ $ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
 ```
 
 ## Install Steps
-1. [ConfigMap에 Grafana config 생성](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-1-configmap%EC%97%90-grafana-config-%EC%83%9D%EC%84%B1)
-2. [대시보드 UID 및 설정 변경](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-2-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-uid-%EB%B0%8F-%EC%84%A4%EC%A0%95-%EB%B3%80%EA%B2%BD)
-3. [Deployment에 Grafana config 적용](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-3-deployment%EC%97%90-grafana-config-%EC%A0%81%EC%9A%A9)	
+1. [Prometheus 확인](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-1-prometheus-%ED%99%95%EC%9D%B8)
+2. [Grafana deploy](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-2-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-uid-%EB%B0%8F-%EC%84%A4%EC%A0%95-%EB%B3%80%EA%B2%BD)
+3. [Grafana 확인](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-3-deployment%EC%97%90-grafana-config-%EC%A0%81%EC%9A%A9)	
 
 
 ***
@@ -61,7 +61,7 @@ $ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
 
 ***
 
-## Step 2. deploy
+## Step 2. Grafana deploy
 * 목적 : grafana 모듈 deploy
 * kubectl create -f yaml/ 명령어를 통해 grafana 모듈을 deploy
 * 비고
@@ -70,7 +70,7 @@ $ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
 
 ***
 
-## Step 3. 확인
+## Step 3. Grafana 확인
 * 목적 : grafana 정상 동작 확인
 * edit svc $GRAFANA_SVC -n monitoring 명령어를 통해 ClusterIP 타입으로 생성된 서비스를 NodePort 또는 LoadBalancer 타입으로 수정한 뒤 해당 IP:port 를 통해 대시보드에 접근할 수 있음
 
