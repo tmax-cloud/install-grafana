@@ -43,9 +43,9 @@ $ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
 
 ## Install Steps
 
-1. [Prometheus 확인](https://github.com/tmax-cloud/install-grafana/blob/4.1/README.md#step-1-prometheus-%ED%99%95%EC%9D%B8)
-2. [Grafana deploy](https://github.com/tmax-cloud/install-grafana/blob/4.1/README.md#step-2-grafana-deploy)
-3. [Grafana 확인](https://github.com/tmax-cloud/install-grafana/blob/4.1/README.md#step-3-grafana-%ED%99%95%EC%9D%B8)	
+1. [Prometheus 확인](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-1-prometheus-%ED%99%95%EC%9D%B8)
+2. [Grafana deploy](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-2-grafana-deploy)
+3. [Grafana 확인](https://github.com/tmax-cloud/install-grafana/blob/main/README.md#step-3-grafana-%ED%99%95%EC%9D%B8)	
 
 
 
