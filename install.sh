@@ -6,11 +6,11 @@ if [ $REGISTRY != "{REGISTRY}" ]; then
   sudo docker tag grafana/grafana:${GRAFANA_VERSION} ${REGISTRY}/grafana:${GRAFANA_VERSION}
   sudo docker push ${REGISTRY}/grafana:${GRAFANA_VERSION}
   sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
- fi
+fi
 
 
 sed -i 's/{GRAFANA_VERSION}/'${GRAFANA_VERSION}'/g' grafana.yaml
 
-
+cd ..
 
 kubectl create -f yaml/
