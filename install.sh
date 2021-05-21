@@ -10,6 +10,11 @@ fi
 
 
 sed -i 's/{GRAFANA_VERSION}/'${GRAFANA_VERSION}'/g' grafana.yaml
+sed -i 's/{DOMAIN}/'${DOMAIN}'/g' grafana-config.yaml
+sed -i 's/{CLIENT_ID}/'${CLIENT_ID}'/g' grafana-config.yaml
+sed -i 's/{CLIENT_SECRET}/'${CLIENT_SECRET}'/g' grafana-config.yaml
+sed -i 's/{KEYCLOAK_ADDR}/'${KEYCLOAK_ADDR}'/g' grafana-config.yaml
+
 
 cd ..
 
