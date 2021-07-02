@@ -29,7 +29,7 @@ data:
     team_ids =
     allowed_organizations =
     send_client_credentials_via_post = false
-    tls_skip_verify_insecure = false
+    tls_skip_verify_insecure = true
     [auth.anonymous]
     enabled = true
     [users]
