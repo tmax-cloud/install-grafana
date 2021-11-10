@@ -12,6 +12,8 @@ data:
     serve_from_sub_path = true
     [security]
     allow_embedding = true
+    [auth]
+    disable_login_form = true
     [auth.generic_oauth]
     name = OAuth
     enabled = true
