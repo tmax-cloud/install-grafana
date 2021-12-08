@@ -22,7 +22,7 @@ spec:
           pathType: Prefix
   tls:
   - hosts:
-    - grafana.tmaxcloud.org
+    - grafana.{DOMAIN_NAME}
 ---
 
 apiVersion: v1
