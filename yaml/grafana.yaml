@@ -110,7 +110,7 @@ spec:
 #            - name: grafana-dashboard-workload-total
 #              mountPath: /grafana-dashboard-definitions/0/workload-total
           terminationMessagePolicy: File
-          image: 'grafana/grafana:6.4.3'
+          image: 'grafana/grafana:8.2.2'
       serviceAccount: grafana
       volumes:
         - name: grafana-storage
