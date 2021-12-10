@@ -28,6 +28,7 @@
 		* CLIENT_SECRET = hyperauth에서 Client > grafana > Credentials > Secret의 문자열
 		* REGISTRY = private registry가 존재하지 않는다면 그대로 둔다.
 		* GRAFANA_PVC = grafana pvc 용량
+		* DOMAIN_NAME = apigateway dns address
 	
 
 ## Step 2. installer 실행
