@@ -22,6 +22,11 @@
 	* 환경에 맞는 config 내용 작성
 		* version.conf 에 알맞는 버전(6.4.3)과 registry, pvc  정보를 입력한다.
 		* DOMAIN_NAME = apigateway dns address
+		* DOMAIN = grafana dns 주소(ex grafana.tmaxcloud.org)
+		* KEYCLOAK_ADDR = hyperauth 주소
+		* CLIENT_ID = hyperauth에 등록한 grafana client id( grafana로 설정해주세요)
+		* CLIENT_SECRET = hyperauth에서 Client > grafana > Credentials > Secret의 문자열
+		* REGISTRY = private registry가 존재하지 않는다면 그대로 둔다.
 	
 
 ## Step 2. installer 실행
