@@ -6,7 +6,7 @@ metadata:
 data:
   grafana.ini: |
     [server]
-    domain = {DOMAIN_NAME}
+    domain = {DOMAIN}
     http_port = 3000
     root_url = https://%(domain)s/api/grafana/
     serve_from_sub_path = true
