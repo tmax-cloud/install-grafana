@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: tmax-cloud
   rules:
-  - host: grafana.tmaxcloud.org
+  - host: grafana.{DOMAIN_NAME}
     http:
       paths:
         - backend:
