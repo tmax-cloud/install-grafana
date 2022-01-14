@@ -89,3 +89,8 @@ $ sed -i "s/grafana\/grafana/${REGISTRY}\/grafana/g" grafana.yaml
 ## 삭제 가이드
 * 목적: grafana 삭제
 * kubectl delete -f /yaml 를 실행한다.
+
+|Namespace|Pod|Container 수|Container|Container image|Request| |Limit| |
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+| | | | | |cpu|memory|cpu|memory|
+|monitoring|grafana|1|grafana|grafana/grafana:6.4.3|100m|100Mi|200m|200Mi|
