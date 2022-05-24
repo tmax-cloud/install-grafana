@@ -1,6 +1,10 @@
 
 # Grafana 설정 가이드
 
+## 개요
+* Prometheus가 수집한 metric data들을 dashboard 형식으로 보여줌.
+* Hyperauth와 연동하여 user 별 dashboard 제공 가능.
+
 ## 구성 요소
 * grafana ([grafana/grafana:6.4.3](https://grafana.com/grafana/download))
 
