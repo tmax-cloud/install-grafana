@@ -2,7 +2,7 @@
 # Grafana 설정 가이드
 
 ## 구성 요소
-* grafana ([grafana/grafana:6.4.3](https://grafana.com/grafana/download))
+* grafana ([grafana/grafana:8.2.2](https://grafana.com/grafana/download))
 
 ## Step 0. Keycloak 연동
 * 목적 : 'Keycloak 연동'
