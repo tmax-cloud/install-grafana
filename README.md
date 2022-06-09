@@ -32,3 +32,5 @@
 	$ sudo chmod +x install.sh
 	$ ./install.sh
 	```
+## HA 가이드
+	grafana.yaml 에서 replica 수를 늘린다.
