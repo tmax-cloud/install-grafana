@@ -33,4 +33,4 @@
 	$ ./install.sh
 	```
 ## HA 가이드
-	grafana.yaml(https://github.com/tmax-cloud/install-grafana/blob/5.1/yaml/grafana.yaml) 에서 replica 수를 늘린다.
+* [grafana.yaml](https://github.com/tmax-cloud/install-grafana/blob/5.1/yaml/grafana.yaml) 에서 replica 수를 늘린다.
