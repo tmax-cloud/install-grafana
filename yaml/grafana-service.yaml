@@ -28,6 +28,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+     traefik.ingress.kubernetes.io/service.serverstransport: tmaxcloud@file
   labels:
     app: grafana
   name: grafana
