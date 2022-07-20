@@ -43,3 +43,13 @@
 	$ sudo chmod +x install.sh
 	$ ./install.sh
 	```
+	
+## log 설정 가이드
+* 목적: 'log level 설정'
+* 순서: ([grafana-config.yaml](https://github.com/tmax-cloud/install-grafana/blob/5.0/yaml/grafana-config.yaml)) 에
+data:
+  grafana.ini: |
+     [log]
+     level = 해당 부분에 설정
+
+
