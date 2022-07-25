@@ -51,6 +51,6 @@
 data:
   grafana.ini: |
      [log]
-     level = 해당 부분에 설정
+     level = 해당 부분에 설정(debug,info, warn, error,critical) (default 는 info)
 ```
 
