@@ -34,3 +34,13 @@
 	```
 ## HA 가이드
 * [grafana.yaml](https://github.com/tmax-cloud/install-grafana/blob/5.1/yaml/grafana.yaml) 에서 replica 수를 늘린다.
+
+## log 설정 가이드
+* 목적: 'log level 설정'
+* 순서: ([grafana-config.yaml](https://github.com/tmax-cloud/install-grafana/blob/5.0/yaml/grafana-config.yaml)) 에
+```
+data:
+  grafana.ini: |
+     [log]
+     level = 해당 부분에 설정(debug,info, warn, error,critical) (default 는 info)
+```
