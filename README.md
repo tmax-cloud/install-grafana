@@ -54,3 +54,33 @@ data:
      level = 해당 부분에 설정(debug,info, warn, error,critical) (default 는 info)
 ```
 
+
+## Hyperauth selfsigned CA 설정
+* 목적: selfsigned_CA를 마운트하여 grafana와 hyperauth에 연동(공인인증서 사용하지 않을 경우)
+
+* 순서:
+  1. selfsigned-ca.yaml에 api-gateway-system namespace에 tmaxcloud-gateway-selfsigned secret의 ca.crt를 넣어준다.
+  
+  2. selfsigned-ca.yaml 생성
+  
+  ```
+  kubectl apply -f selfsigned-ca.yaml
+  ```
+  
+  3. grafana.yaml 에 selfsigned-ca volume mount
+  ```
+  volumeMounts:
+  - name: selfsigned-ca
+    mountPath: /etc/grafana
+    readOnly: true
+  volumes:
+  - name: selfsigned-ca
+    secret:
+      secretName: selfsigned-ca
+  ```
+  4. grafana-config.yaml 수정
+  ```
+  [auth.generic_oauth]
+  tls_skip_verify_insecure = false
+  tls_client_cert = /etc/grafana/selfsigned-ca.crt
+  ```
