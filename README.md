@@ -82,5 +82,5 @@ data:
   ```
   [auth.generic_oauth]
   tls_skip_verify_insecure = false
-  tls_client_cert = /etc/grafana/selfsigned-ca.crt
+  tls_client_cert = /etc/grafana/ca.crt
   ```
