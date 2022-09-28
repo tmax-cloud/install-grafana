@@ -20,7 +20,7 @@
 * 목적 : `version.conf 파일에 설치를 위한 정보 기입`
 * 순서: 
 	* 환경에 맞는 config 내용 작성
-		* version.conf 에 알맞는 버전(6.4.3)과 registry, pvc  정보를 입력한다.
+		* version.conf 에 알맞는 버전(8.2.2)과 registry, pvc  정보를 입력한다.
 		* DOMAIN_NAME = apigateway dns address
 	
 
